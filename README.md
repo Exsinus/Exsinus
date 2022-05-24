@@ -1,7 +1,3 @@
-- Hi, if u wonna reach:
-- My Telegram: @exsinus
-
-<!---
-Exsinus/Exsinus is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Hi, my contacts:
+Telegram: @exsinus
+Discord: exsinus#9188
