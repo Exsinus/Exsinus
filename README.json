@@ -1,0 +1,11 @@
+{
+  "exsinus": {
+    "age": 17,
+    "country": "KZ, Almaty",
+    "languages": ["RU", "EN", "PYTHON", "JAVA"],
+    "contacts": {
+      "Telegram": "@exsinus",
+      "Discord": "exsinus#9188"
+    }
+  }
+}
