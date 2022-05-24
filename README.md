@@ -1,3 +1,3 @@
 Hi, my contacts:
-Telegram: @exsinus
-Discord: exsinus#9188
+- Telegram: @exsinus
+- Discord: exsinus#9188
