@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Calculator {
 
     public static void main(String[] args) {
-        System.out.println("Created by exsinus\nTelegram: @exsinus\nDiscord: exsinus#9188\n\nExample: 1+5-2*8");
+        System.out.println("Example: 1+5-2*8");
         Scanner scan = new Scanner(System.in);
 
         while (true) {
