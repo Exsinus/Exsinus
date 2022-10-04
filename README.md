@@ -1,2 +1,2 @@
 # TicTacToe
-- Simple game with UI on swing framework.
+- Simple game with UI on the Swing framework.
