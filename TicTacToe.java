@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TicTacToe {
-    private static final JFrame FRAME = new JFrame("Tic-Tac-Toe | Player X");
+    private static final JFrame FRAME = new JFrame("Tic-Tac-Toe | <X>");
     private static final JButton[] CELLS = new JButton[9];
     private static String queue = "O";
     private static int moveCount = 0;
@@ -36,7 +36,7 @@ public class TicTacToe {
 
     private static void move(JButton cell) {
         if (cell.getText().equals("")) {
-            FRAME.setTitle("Tic-Tac-Toe | Player " + queue);
+            FRAME.setTitle("Tic-Tac-Toe | <" + queue + ">");
             if (queue.equals("X")) {
                 queue = "O";
                 cell.setForeground(Color.BLUE);
@@ -47,21 +47,21 @@ public class TicTacToe {
 
             cell.setText(queue);
             moveCount++;
-            resultCheck();
+            checkResult();
         }
     }
 
-    private static void resultCheck() {
-        if (cellCheck(0) && cellCheck(1) && cellCheck(2) ||
-                cellCheck(3) && cellCheck(4) && cellCheck(5) ||
-                cellCheck(6) && cellCheck(7) && cellCheck(8) ||
-                cellCheck(0) && cellCheck(3) && cellCheck(6) ||
-                cellCheck(1) && cellCheck(4) && cellCheck(7) ||
-                cellCheck(2) && cellCheck(5) && cellCheck(8) ||
-                cellCheck(0) && cellCheck(4) && cellCheck(8) ||
-                cellCheck(2) && cellCheck(4) && cellCheck(6)
+    private static void checkResult() {
+        if (checkCells(new int[]{0, 1, 2}) ||
+                checkCells(new int[]{3, 4, 5}) ||
+                checkCells(new int[]{6, 7, 8}) ||
+                checkCells(new int[]{0, 3, 6}) ||
+                checkCells(new int[]{1, 4, 7}) ||
+                checkCells(new int[]{2, 5, 8}) ||
+                checkCells(new int[]{0, 4, 8}) ||
+                checkCells(new int[]{2, 4, 6})
         ) {
-            System.out.println("Player " + queue + " Wins!");
+            System.out.println(queue + " Wins!");
             restart();
         } else if (moveCount == 9) {
             System.out.println("Draw!");
@@ -69,12 +69,17 @@ public class TicTacToe {
         }
     }
 
-    private static boolean cellCheck(int index) {
-        return CELLS[index].getText().equals(queue);
+    private static boolean checkCells(int[] indexes) {
+        for (int index: indexes) {
+            if (!CELLS[index].getText().equals(queue)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static void restart() {
-        FRAME.setTitle("Tic-Tac-Toe | Player X");
+        FRAME.setTitle("Tic-Tac-Toe | <X>");
         queue = "O";
         moveCount = 0;
 
